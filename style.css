@@ -1,0 +1,464 @@
+/* Universal Reset and Box Model */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-size: 2.5em;
+    color: #1a4f78; /* Deep Blue for Sobha Brand Feel */
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.lead-text {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* --- Header & Navigation --- */
+header {
+    background-color: #1a4f78;
+    color: white;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: 800;
+    color: #ffd700; /* Gold Accent */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+.cta-nav {
+    background-color: #ffd700;
+    color: #1a4f78 !important;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* --- Hero Section --- */
+.hero {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    background: url('placeholder_hero.jpg') no-repeat center center/cover; /* Placeholder image file */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    color: white;
+}
+
+.tagline {
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.hero h2 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    font-weight: 900;
+    color: #ffd700;
+    line-height: 1.2;
+}
+
+.sub-heading {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #e63946; /* Red CTA Button */
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #c72c38;
+}
+
+.call-action {
+    margin-top: 30px;
+    font-size: 1.2em;
+}
+
+.call-action i {
+    color: #ffd700;
+    margin-right: 10px;
+}
+
+.call-action a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* --- Project Overview --- */
+.overview-grid {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin-bottom: 60px;
+}
+
+.overview-text {
+    flex: 2;
+}
+
+.overview-image-placeholder {
+    flex: 1;
+    background-color: #eee;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.project-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+.image-caption {
+    margin-top: 10px;
+    font-style: italic;
+    color: #777;
+    font-size: 0.9em;
+}
+
+.features-list h3 {
+    color: #1a4f78;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.features-list ul {
+    list-style: none;
+}
+
+.features-list li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #eee;
+    color: #555;
+    font-weight: 500;
+}
+
+.features-list li i {
+    color: #38a3a5; /* Green checkmark */
+    margin-right: 10px;
+}
+
+.amenities-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #1a4f78;
+}
+
+.amenities-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    text-align: center;
+}
+
+.amenity-item {
+    flex: 0 0 calc(20% - 30px); /* 5 items per row on desktop */
+    min-width: 120px;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.amenity-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.amenity-item i {
+    font-size: 2.5em;
+    color: #38a3a5;
+    margin-bottom: 10px;
+}
+
+.bg-light {
+    background-color: #f0f4f7;
+}
+
+/* --- Location & Distances --- */
+.distance-table-wrapper {
+    overflow-x: auto;
+}
+
+.distance-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border-radius: 8px;
+}
+
+.distance-table th, .distance-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.distance-table th {
+    background-color: #1a4f78;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.distance-table tr:hover {
+    background-color: #eef4f9;
+}
+
+/* --- Contact Form --- */
+.contact-content {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-detail {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.contact-detail i {
+    color: #e63946;
+    font-size: 1.5em;
+    margin-right: 15px;
+}
+
+.contact-detail a {
+    color: #1a4f78;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.agent-detail {
+    font-size: 1.1em;
+    color: #555;
+    margin-top: 15px;
+}
+
+.contact-form-container {
+    flex: 1;
+    background-color: #f7f7f7;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.contact-form input, .contact-form select {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact-form button {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.disclaimer-text {
+    font-size: 0.75em;
+    color: #777;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #1a4f78;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    font-size: 0.9em;
+}
+
+/* --- Floating WhatsApp --- */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: width 0.3s, border-radius 0.3s;
+}
+
+.whatsapp-float span {
+    display: none;
+    font-size: 14px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.whatsapp-float:hover {
+    width: 180px;
+    border-radius: 5px;
+}
+
+.whatsapp-float:hover span {
+    display: inline-block;
+}
+
+/* --- Responsiveness (Mobile-Friendly) --- */
+@media (max-width: 900px) {
+    .nav-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav ul {
+        justify-content: center;
+        padding-top: 10px;
+        flex-wrap: wrap;
+    }
+
+    nav ul li {
+        margin: 5px 10px;
+    }
+
+    .hero h2 {
+        font-size: 2.5em;
+    }
+
+    .sub-heading {
+        font-size: 1.2em;
+    }
+
+    .overview-grid {
+        flex-direction: column;
+    }
+
+    .overview-image-placeholder {
+        order: -1; /* Move image to the top on mobile */
+    }
+
+    .amenities-grid {
+        gap: 20px;
+    }
+
+    .amenity-item {
+        flex: 0 0 calc(45% - 20px); /* 2 items per row on mobile */
+    }
+
+    .contact-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .whatsapp-float {
+        right: 20px;
+        bottom: 20px;
+    }
+}
