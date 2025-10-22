@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You | Sobha Luxury Homes</title>
-    <link rel="stylesheet" href="style.css">
     <style>
         body {
+            font-family: 'Arial', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -14,25 +14,43 @@
             text-align: center;
             background-color: #f0f4f7;
             color: #333;
+            line-height: 1.6;
         }
         .thank-you-box {
             background-color: white;
-            padding: 40px;
+            padding: 50px 40px;
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            max-width: 600px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            max-width: 650px;
+            margin: 20px;
         }
         .thank-you-box h2 {
-            color: #1a4f78;
-            font-size: 2.5em;
-            margin-bottom: 15px;
+            color: #1a4f78; /* Deep Blue */
+            font-size: 2.2em;
+            margin-bottom: 25px;
+            font-weight: 700;
         }
         .thank-you-box p {
             font-size: 1.1em;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
-        .thank-you-box a {
-            color: #e63946;
+        .contact-info {
+            background-color: #eef7ff;
+            border: 1px solid #d0e0f0;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        .contact-info strong {
+            display: block;
+            font-size: 1.2em;
+            color: #e63946; /* Red Accent */
+            margin-top: 5px;
+        }
+        .return-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: #1a4f78;
             text-decoration: none;
             font-weight: bold;
         }
@@ -40,9 +58,18 @@
 </head>
 <body>
     <div class="thank-you-box">
-        <h2>Thank You for Your Enquiry!</h2>
-        <p>Your details have been successfully submitted. Our Sales Expert, **[Your Name/Designation]**, will contact you shortly on **+91-9599320026** to share the exclusive pre-launch details and price list.</p>
-        <p>In the meantime, you may <a href="index.html">return to the home page</a>.</p>
+        <h2>✅ Thank You for Your Enquiry!</h2>
+        <p>Your interest in **Sobha's Luxury Project, Sector 1 Noida Extension**, has been successfully registered. You are one step closer to securing your dream home.</p>
+
+        <div class="contact-info">
+            <p>Our Sales Expert, **Neeraj Baveja**, is processing your request and will contact you within 30 minutes on the number you provided.</p>
+            <p>For immediate assistance, please call your dedicated expert now:</p>
+            <strong><a href="tel:+919599320026">+91-9599320026</a></strong>
+        </div>
+
+        <p>We look forward to sharing the exclusive pre-launch details and price list with you.</p>
+
+        <a href="index.html" class="return-link">← Return to the Project Home Page</a>
     </div>
 </body>
 </html>
